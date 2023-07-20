@@ -32,13 +32,34 @@ class NavbarWidget extends StatelessWidget {
                   Icon(
                     Icons.home,
                     color: Color(0xFFEF7532),
-                  )
+                  ),
+                  Icon(
+                    Icons.search,
+                    color: Color(0xFF676E79),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 50.0,
+              width: MediaQuery.of(context).size.width / 2 - 40.0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  Icon(
+                    Icons.shopping_basket_outlined,
+                    color: Color(0xFF676E79),
+                  ),
+                  Icon(
+                    Icons.person_outline,
+                    color: Color(0xFF676E79),
+                  ),
                 ],
               ),
             )
           ], 
         ),
-        ),
+      ),
     );
   }
 }
