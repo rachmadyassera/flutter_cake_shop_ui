@@ -10,7 +10,7 @@ class NavbarWidget extends StatelessWidget {
       shape: const CircularNotchedRectangle(),
       notchMargin: 8,
       color: Colors.transparent,
-      elevation: 10,
+      elevation: 0,
       child: Container(
         height: 50.0,
         decoration: const BoxDecoration(
