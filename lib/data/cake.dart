@@ -15,7 +15,7 @@ class Cake {
     required this.isFavorite,
     required this.subMenu,
   });
-
+}
   final List<Cake> listCakes = [
     Cake(
         id: 1,
@@ -53,4 +53,4 @@ class Cake {
         isFavorite: false,
         subMenu: 'cake_box'),
   ];
-}
+
