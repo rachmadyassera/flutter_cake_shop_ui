@@ -106,7 +106,7 @@ class CakeryDetail extends StatelessWidget {
             child: SizedBox(
               width: MediaQuery.of(context).size.width - 50,
               child: const Text(
-                'Bolu atau kue bolu adalah kue berbahan dasar tepung, gula, dan telur. Kue Bolu dan',
+                'Bolu atau kue bolu adalah kue berbahan dasar tepung, gula, dan telur. Kue Bolu dan Cake pada umumnya, dimatangkan dengan cara dipanggang di dalam oven, walaupun ada ',
                 maxLines: 4,
                 textAlign: TextAlign.center,
                 style: TextStyle(
