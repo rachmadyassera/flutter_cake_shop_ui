@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cakery_shop_ui/screen/cakery_detail.dart';
 import '../data/cake.dart';
 
 class CookiePage extends StatelessWidget {
@@ -40,7 +41,15 @@ class CookiePage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(5),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+            return CakeryDetail(
+              assetsPath: cake.imageUrl,
+              cookieprice: cake.price,
+              cookiename: cake.name,
+            );
+          }));
+        },
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
@@ -104,12 +113,66 @@ class CookiePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8),
                 child: Container(
-                  color: Color(0xFFEBEBEB),
+                  color: const Color(0xFFEBEBEB),
                   height: 1,
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      children: const [
+                        Icon(
+                          Icons.shopping_basket,
+                          color: Color(0xFFD17E50),
+                          size: 16,
+                        ),
+                        SizedBox(
+                          width: 6,
+                        ),
+                        Text(
+                          'Beli',
+                          style: TextStyle(
+                              fontFamily: 'Varela',
+                              color: Color(0xFFD17E50),
+                              fontSize: 12),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    Row(
+                      children: const [
+                        Icon(
+                          Icons.remove_circle_outline,
+                          color: Color(0xFFD17E50),
+                          size: 16,
+                        ),
+                        SizedBox(
+                          width: 6,
+                        ),
+                        Text(
+                          '3',
+                          style: TextStyle(
+                              fontFamily: 'Varela',
+                              color: Color(0xFFD175E50),
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12),
+                        ),
+                        SizedBox(
+                          width: 6,
+                        ),
+                        Icon(
+                          Icons.add_circle_outline,
+                          color: Color(0xFFD17E50),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
             ],
           ),

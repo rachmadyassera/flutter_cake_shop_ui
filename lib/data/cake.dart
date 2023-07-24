@@ -52,5 +52,12 @@ class Cake {
         imageUrl: 'assets/box5.jpeg',
         isFavorite: false,
         subMenu: 'cake_box'),
+  Cake(
+      id: 6,
+      name: 'Brownies Almond',
+      price: '94.000',
+      imageUrl: 'assets/box6.jpeg',
+      isFavorite: false,
+      subMenu: 'cake_box'),
   ];
 
